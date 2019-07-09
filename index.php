@@ -1,17 +1,23 @@
 <?php
 
 require_once("config.php");
+//carrega um usuario
+//$Joama = new Usuario();
+//$Joama->loadById(2);
+//echo $Joama;
 
-$Joama = new Usuario();
+//carrega uma lista de usuarios
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-$Joama->loadById(2);
+//carrega uma lista de usuarios buscando pelo login
+//$search = Usuario::search("Lu");
+//echo json_encode($search);
 
-echo $Joama;
+//Carrega um usuario usando o login e a senha
+$usuario = new Usuario();
+$usuario->login("Zoro","esp");
 
-//$sql = new Sql();
-
-//$usuarios = $sql->select("SELECT * FROM tb_usuarios");
-
-//echo json_encode($usuarios);
+echo $usuario;
 
 ?>
