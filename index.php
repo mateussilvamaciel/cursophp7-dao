@@ -15,9 +15,21 @@ require_once("config.php");
 //echo json_encode($search);
 
 //Carrega um usuario usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("Zoro","esp");
+//echo $usuario;
+
+//insert de um usuario novo
+//$aluno = new Usuario("aluno", "%$#f");
+//$aluno->insert();
+//echo $aluno;
+
+//
 $usuario = new Usuario();
-$usuario->login("Zoro","esp");
+
+$usuario->loadById(8);
+
+$usuario->update("Nami", "wp%4");
 
 echo $usuario;
-
 ?>
